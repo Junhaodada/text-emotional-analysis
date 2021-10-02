@@ -1,0 +1,363 @@
+@import '~normalize.css/normalize.css';
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+@import './topbar.scss';
+@import "~fit2cloud-ui/src/styles/index.scss";
+@import './vdrr/common-temp.scss';
+@import '~umy-ui/lib/theme-chalk/index.css';
+// 引入样式
+@import './deicon/iconfont.css';
+
+
+body {
+  //height: $contentHeight;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  //height: $contentHeight;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container global css
+.app-container {
+  padding: 20px;
+}
+
+.de-dialog {
+  width: 30% !important;
+
+  .el-dialog__header {
+    background-color: #f4f4f5;
+    padding: 10px 20px !important;
+  }
+
+  .el-dialog__body {
+    padding: 1px 20px !important;
+  }
+}
+
+.de-filter-dialog {
+  min-width: 500px !important;
+  width: 50% !important;
+
+  .el-dialog__header {
+    // background-color: #f4f4f5;
+    padding: 10px 20px !important;
+
+    .el-dialog__headerbtn {
+      top: 15px !important;
+    }
+  }
+
+  .el-dialog__body {
+    padding: 1px 15px !important;
+  }
+}
+
+.de-style-dialog {
+  width: 600px !important;
+
+  .el-dialog__header {
+    // background-color: #f4f4f5;
+    padding: 10px 20px !important;
+
+    .el-dialog__headerbtn {
+      top: 15px !important;
+    }
+  }
+
+  .el-dialog__body {
+    padding: 1px 15px !important;
+  }
+}
+
+.preview-dialog {
+  padding: 0px !important;
+
+  .el-dialog--center {
+    padding: 0px !important;
+  }
+
+  .el-dialog__header {
+    display: none !important;
+  }
+
+  .el-dialog__body {
+    padding: 0px !important;
+    height: 100vh !important;
+  }
+}
+
+.de-search-header {
+  .el-tabs__header {
+    display: none !important;;
+  }
+}
+
+.de-input {
+  margin-bottom: 14px;
+  margin-top: 10px;
+
+  .el-input {
+    .el-input__inner {
+      line-height: 30px !important;
+      height: 30px !important;
+      border-right: none;
+    }
+  }
+
+  .el-input__inner:focus {
+    border-color: #E6E6E6 !important;
+  }
+
+  .el-input-group__append {
+    background-color: #ffffff;
+  }
+}
+
+.filter-card-class {
+  width: 100%;
+
+  .el-card__header {
+    padding: 5px 0 !important;
+    border-bottom: none !important;
+  }
+
+  .el-card__body {
+    padding: 10px;
+  }
+}
+
+.real-input {
+  .el-input__inner {
+    height: 25px !important;
+    border: none !important;
+  }
+}
+
+.de-filter-data-table {
+  .el-table__body-wrapper > table > {
+    tbody {
+      .el-table__row {
+        :hover {
+          cursor: pointer;
+        }
+
+        td {
+          border: none !important;
+        }
+      }
+    }
+  }
+}
+
+.de-msg-data-table {
+  .el-table__body-wrapper > table > {
+    tbody {
+      .el-table__row {
+        :hover {
+          cursor: pointer;
+        }
+      }
+
+      td {
+        padding: 3px 0 !important;
+      }
+    }
+  }
+}
+
+.de-filter-data-table::before {
+  height: 0px !important;
+}
+
+.de-msg-data-table::before {
+  height: 0px !important;
+}
+
+.custom-component-class {
+  width: 100%;
+
+  div:not(.de-number-range-container ) {
+    width: 100% !important;
+  }
+
+  div.el-input-group__append {
+    width: 10% !important;
+  }
+  .de-select-grid-class {
+    .list {
+      position: relative !important;
+      height: 200px !important;
+      overflow-y: scroll !important;
+      top: 0px !important;
+    }
+  }
+
+}
+
+%field-icon {
+  font-size: 13px;
+  margin: 0 2px 0 0;
+}
+
+.field-icon-text {
+  @extend %field-icon;
+  color: #688fd8;
+}
+
+.field-icon-time {
+  @extend %field-icon;
+  color: #faaa39;
+}
+
+.field-icon-value {
+  @extend %field-icon;
+  color: #37b4aa;
+}
+
+.field-icon-location {
+  @extend %field-icon;
+  color: #F56C6C;
+}
+
+.field-icon-sort {
+  font-size: 10px;
+  @extend %field-icon;
+  color: #999999;
+  margin: 0 2px 1px 0;
+}
+
+.ds-icon-pdf {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  color: #0a7be0;
+}
+
+
+.ds-icon-scene {
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  color: #0a7be0;
+}
+
+.ds-icon-db {
+  width: 14px;
+  height: 14px;
+  color: #3685f2;
+  margin: 0 2px 0 0;
+}
+
+.ds-icon-sql {
+  width: 14px;
+  height: 14px;
+  color: #faaa39;
+  margin: 0 2px 0 0;
+}
+
+.ds-icon-excel {
+  width: 14px;
+  height: 14px;
+  color: #13cd66;
+  margin: 0 2px 0 0;
+}
+
+.ds-icon-custom {
+  width: 14px;
+  height: 14px;
+  color: #23beef;
+  margin: 0 2px 0 0;
+}
+
+.showRightPanel {
+  .el-popper {
+    position: fixed !important;
+  }
+}
+
+.login-logo-icon {
+  width: auto;
+  height: 60px;
+}
+
+.top-nav-logo-icon {
+  width: 140px;
+  height: 45px;
+  padding-top: 10px;
+}
+
+.m-colorPicker .box {
+  bottom: 20px;
+}
+
+
+.tox-tinymce-aux {
+  z-index: 10000 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  height: 10px;
+  background: #d7d9e3;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.el-color-dropdown__link-btn {
+  display: none!important;
+}
